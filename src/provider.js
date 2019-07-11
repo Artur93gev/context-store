@@ -41,4 +41,6 @@ class StateProvider extends React.PureComponent {
       </Context.Provider>
     );
   }
-}
+};
+
+export default StateProvider;

@@ -1,11 +1,9 @@
 
-import { useContext } from 'react';
-
 import StateProvider from './provider';
 import createContext from './createContext';
 import createConsumerObject from './decorator';
 
-import { updater } from '../utils';
+import { updater } from './utils';
 
 const getStore = (hasCachedData, storeName, storage) => hasCachedData ? JSON.parse(storage.getItem(storeName)) : null;
 
