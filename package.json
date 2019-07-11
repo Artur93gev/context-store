@@ -1,0 +1,31 @@
+{
+  "name": "context-api-store",
+  "version": "1.0.0",
+  "description": "State management tool",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Artur93gev/context-store.git"
+  },
+  "keywords": [
+    "state management",
+    "context API"
+  ],
+  "author": "artur93gev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Artur93gev/context-store/issues"
+  },
+  "homepage": "https://github.com/Artur93gev/context-store#readme",
+  "peerDedependencies": {
+    "react": "^16.3.0"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.14",
+    "react": "^16.8.6"
+  },
+  "engines": {
+    "node": ">= 8.9.4",
+    "npm": ">= 5.6.0"
+  }
+}
