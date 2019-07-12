@@ -19,4 +19,4 @@ on a branch of your store.
 
 ## Example
 
-  you can play with it in [sandbox](https://codesandbox.io/s/priceless-maxwell-1mr5r)
+ You can play with it in [sandbox](https://codesandbox.io/s/priceless-maxwell-1mr5r)
