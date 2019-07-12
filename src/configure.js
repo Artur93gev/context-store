@@ -1,4 +1,3 @@
-
 import StateProvider from './provider';
 import createContext from './createContext';
 import createConsumerObject from './decorator';
