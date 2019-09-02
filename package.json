@@ -1,6 +1,6 @@
 {
   "name": "context-api-store",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "State management tool",
   "main": "index.js",
   "repository": {
