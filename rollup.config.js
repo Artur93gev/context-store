@@ -16,6 +16,7 @@ export default {
     },
   ],
   plugins: [
+    resolve(),
     babel({
       babelrc: false,
       exclude: 'node_modules/**',
@@ -26,8 +27,7 @@ export default {
         '@babel/plugin-syntax-jsx',
       ],
     }),
-    resolve(),
-    external(),
     commonjs(),
+    external(),
   ],
 };
