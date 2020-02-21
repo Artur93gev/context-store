@@ -3,11 +3,10 @@ import isEqual from 'lodash-es/isEqual';
 
 /** @function createConsumerObject
  * @param {React.Context} Context
- * @param {string} storeName
  * This function is creating a decorator for any given context.
  */
 
-const createConsumerObject = (Context, storeName) =>
+const createConsumerObject = Context =>
   (Component, accessors = () => void 0, actionKeys = []) => {
 
     let updateFromParent = true;

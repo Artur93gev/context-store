@@ -15,8 +15,9 @@ export default {
       exports: 'named',
     },
   ],
+  external: ['react'],
   plugins: [
-    resolve(),
+    external(),
     babel({
       babelrc: false,
       exclude: 'node_modules/**',
@@ -27,7 +28,11 @@ export default {
         '@babel/plugin-syntax-jsx',
       ],
     }),
-    commonjs(),
-    external(),
+    commonjs({
+      namedExports: {
+        'react': ['useContext'],
+      }
+    }),
+    resolve(),
   ],
 };

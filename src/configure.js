@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+
 import StateProvider from './provider';
 import createContext from './createContext';
 import createConsumerObject from './decorator';
@@ -15,6 +17,8 @@ const getStore = (hasCachedData, storeName, storage) => hasCachedData ? JSON.par
  * @param {function} caching - optional argument that must return object,
  * which structure is similar with store structure. The object must include the values that need to be stored to storage.
  */
+
+const contextStack = {};
 
 const configureStore = (storeName, defaultState, StoreActions, caching, isSession = true) => {
 
@@ -68,10 +72,20 @@ const configureStore = (storeName, defaultState, StoreActions, caching, isSessio
 
   const consumerDecorator = createConsumerObject(Context, storeName);
 
+  contextStack[storeName] = Context;
+
   return {
     StoreProvider,
     consumerDecorator,
   };
 };
+
+const createStoreHook = storeName => {
+  return () => useContext(contextStack[storeName]);
+};
+
+export {
+  createStoreHook,
+}
 
 export default configureStore;
