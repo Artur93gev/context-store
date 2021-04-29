@@ -1,0 +1,42 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: "@babel/core"
+    versions:
+    - 7.12.10
+    - 7.12.13
+    - 7.12.16
+    - 7.12.17
+    - 7.13.1
+    - 7.13.10
+    - 7.13.13
+    - 7.13.14
+    - 7.13.15
+    - 7.13.8
+  - dependency-name: "@babel/plugin-transform-react-jsx"
+    versions:
+    - 7.12.12
+    - 7.12.13
+    - 7.12.16
+    - 7.12.17
+  - dependency-name: "@babel/plugin-proposal-class-properties"
+    versions:
+    - 7.12.1
+    - 7.12.13
+  - dependency-name: lodash-es
+    versions:
+    - 4.17.20
+  - dependency-name: react
+    versions:
+    - 17.0.1
+  - dependency-name: "@babel/plugin-syntax-jsx"
+    versions:
+    - 7.12.1
+  - dependency-name: "@babel/plugin-proposal-export-default-from"
+    versions:
+    - 7.12.1
